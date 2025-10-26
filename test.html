@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Tails</title> 
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="responsive.css"> 
+  <link rel="icon" type="image/png" href="Happy Tails Logo.png">
+  <style>
+   
+    body {
+      background-color: #111; 
+      color: #ffffff;          /* White text */
+      font-family: Arial, sans-serif;
+    }
+
+    a {
+      color: #ffcc00; /* Gold links for high contrast */
+    }
+
+    a:hover, a:focus {
+      color: #ffff66;
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    nav.w3-bar {
+      background-color: #222; /* Darker nav for contrast */
+    }
+
+    .search-form input[type="text"] {
+      background-color: #333;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+
+    .search-form button {
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .search-form button:hover, .search-form button:focus {
+      background-color: #ffff66;
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    /* Hero overlay for contrast */
+    .w3-display-middle {
+      background-color: rgba(0,0,0,0.7); /* Darker overlay for text readability */
+      padding: 20px;
+    }
+
+    button.w3-button.w3-red {
+      background-color: #d32f2f; /* Dark red button for contrast */
+      color: #ffffff;
+    }
+
+    button.w3-button.w3-red:hover, button.w3-button.w3-red:focus {
+      background-color: #ff5252;
+      outline: 2px solid #ffffff;
+      outline-offset: 2px;
+    }
+
+    /* Card backgrounds */
+    .w3-card {
+      background-color: #222;
+      color: #ffffff;
+    }
+
+    .w3-card h3, .w3-card p {
+      color: #ffffff;
+    }
+
+    /* Modal */
+    .w3-modal-content {
+      background-color: #333;
+      color: #ffffff;
+    }
+    .w3-modal-content h2 {
+      color: #ffcc00;
+    }
+
+    footer {
+      background-color: #222;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Navigation -->
+  <header>
+    <nav class="w3-bar w3-large">
+      <a href="index.html" class="w3-bar-item w3-button">Home</a>
+      <a href="productsandservices.html" class="w3-bar-item w3-button w3-hide-small">Products & Services</a>
+      <a href="testimonials.html" class="w3-bar-item w3-button w3-hide-small">Testimonials</a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+      <a href="sitemap.html" class="w3-bar-item w3-button w3-hide-small">Sitemap</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" onclick="toggleMenu()">☰</a>
+
+      <form action="index.html" method="get" class="search-form w3-right" aria-label="Site search">
+        <label for="search-input" class="sr-only">Search this site</label>
+        <input type="text" id="search-input" name="q" placeholder="Search this site..." aria-label="Search this site">
+        <input type="hidden" name="sitesearch" value="index.html">
+        <button type="submit">Search</button>
+      </form>
+    </nav>
+
+    <div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
+      <a href="productsandservices.html" class="w3-bar-item w3-button">Products & Services</a>
+      <a href="testimonials.html" class="w3-bar-item w3-button">Testimonials</a>
+      <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="sitemap.html" class="w3-bar-item w3-button">Sitemap</a>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="w3-padding w3-small" style="background-color:#222;">
+    <span><a href="index.html">Home</a> / Welcome</span>
+  </div>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="w3-display-container w3-center" style="position:relative;">
+      <img src="main page image.webp" style="width:100%" alt="Happy Tails storefront with welcoming signage">
+      <div class="w3-display-middle w3-padding">
+        <h1 class="w3-xxlarge">Welcome to Happy Tails</h1>
+        <p class="w3-large">Home of the Happy Tails</p>
+        <button class="w3-button w3-red" onclick="document.getElementById('specialsModal').style.display='block'">
+          Pet Supply Specials
+        </button>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="w3-content w3-padding-32 w3-center">
+      <h2>About Us</h2>
+      <p>
+        At Happy Tails, we sell pet supplies, grooming services, and pet appointments. 
+        Stop in to see what we have for your furry friend!
+      </p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="w3-row w3-padding-32 w3-center">
+      <div class="w3-third w3-padding">
+        <div class="w3-card">
+          <img src="dog collar and leash main page.webp" style="width:65%" alt="Dog collars, harnesses, and leashes for sale">
+          <div class="w3-container">
+            <h3>Pet Supplies</h3>
+            <p>Leashes, harnesses, collars, and more.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third w3-padding">
+        <div class="w3-card">
+          <img src="pet grooming home.jpg" style="width:100%" alt="Pet grooming in progress">
+          <div class="w3-container">
+            <h3>Services</h3>
+            <p>We offer pet grooming services.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w3-third w3-padding">
+        <div class="w3-card">
+          <img src="pet appointment main.jpeg" style="width:100%" alt="Scheduling a pet appointment">
+          <div class="w3-container">
+            <h3>Appointments</h3>
+            <p>Schedule an appointment today!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specials Modal -->
+    <div id="specialsModal" class="w3-modal" role="dialog" aria-labelledby="specialsTitle" aria-modal="true">
+      <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container"> 
+          <span onclick="document.getElementById('specialsModal').style.display='none'" class="w3-button w3-display-topright" aria-label="Close modal">&times;</span>
+          <h2 id="specialsTitle">Today's Specials</h2>
+        </header>
+        <div class="w3-container">
+          <p>Adjustable Harness 45% off!</p>
+          <p>Grooming discounts on Wednesdays.</p>
+          <p>Rugid brand leashes 5% off!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio Section -->
+    <section class="w3-content w3-padding-32">
+      <h2>Dogs Walking</h2>
+      <audio controls aria-label="Dogs walking sound">
+        <source src="dogs_walking.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="w3-padding-16 w3-center">
+    <p>&copy; 2025 Happy Tails</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("mobileMenu");
+      if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+
+</body>
+</html>
