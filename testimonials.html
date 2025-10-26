@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Testimonials</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="Happy Tails Logo.png">
+</head>
+
+<body>
+
+<div class="w3-bar w3-light-grey w3-border w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="productsandservices.html" class="w3-bar-item w3-button w3-hide-small">Products and Services</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button w3-hide-small">Sitemap</a>
+
+    <a href="javascript:void(0)" 
+       class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" 
+       onclick="toggleMenu()">☰</a>
+</div>
+
+<div class="w3-padding w3-light-grey w3-small">
+    <span><a href="index.html">Home</a> / Testimonials</span>
+</div>
+<h1 style="text-align:center;">Testimonials</h1>
+
+<body>
+<p>Testimonials from our customers.</p></body>
+
+<div class="w3-content w3-display-container" style="max-width:600px">
+  <img class="mySlides w3-border" src="Testimonials 1.avif" style="width:100%">
+  <img class="mySlides w3-border" src="Testimonials 2.jpg" style="width:100%">
+  <img class="mySlides w3-border" src="Testimonials 3.png" style="width:100%">
+  <img class="mySlides w3-border" src="Testimonials 4.jpg" style="width:100%">
+  <img class="mySlides w3-border" src="Testimonials 5.jpg" style="width:100%">
+  <img class="mySlides w3-border" src="Testimonials 6.jpg" style="width:100%">
+
+  
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
+</div>
+
+<p><i><strong>Sarah M.</strong><br>
+"I have been taking my Golden Retriever, Max, to Paws & Whiskers for over a year now, and I could not be happier! The staff is so friendly, and Max always comes home looking and smelling amazing. Highly recommend!”</i></p>
+
+<p><i><strong>Jason R.</strong><br>
+"The groomers here really know what they are doing. My bulldog can be difficult, but they handled him with so much patience and care. The results were fantastic!"</i></p>
+
+<p><i><strong>Emily T.</strong><br>
+"I love how clean and organized the store is. The groomers are professional and genuinely care about my dogs comfort. I always feel confident leaving Bella in their hands."</i></p>
+
+<p><i><strong>Maria L.</strong><br>
+"Best grooming experience ever! My poodle has never looked so fluffy. They even gave me tips on keeping her coat healthy between visits."</p></i></p>
+
+<p><i><strong>Kevin S.</strong><br>
+"From start to finish, the service was excellent. Booking was easy, the staff was kind, and my dog seemed happy the entire time. I will definitely be coming back."</p></i></p>
+
+<p><i><strong>Olivia P.</strong><br>
+"I appreciate that they take the time to listen to what I want for my dogs haircut. The results always match exactly what I had in mind!"</p></i></p>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>

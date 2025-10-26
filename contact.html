@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Tails</title>
+    
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="responsive.css"> 
+    
+
+<link rel="icon" type="image/png" href="Happy Tails Logo.png">
+</head>
+
+<body>
+
+
+<div class="w3-bar w3-light-grey w3-border w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="productsandservices.html" class="w3-bar-item w3-button w3-hide-small">Products and Services</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button w3-hide-small">Testimonials</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button w3-hide-small">Sitemap</a>
+
+    <a href="javascript:void(0)" 
+       class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" 
+       onclick="toggleMenu()">☰</a>
+</div>
+
+
+<div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-light-grey">
+    <a href="productsandservices.html" class="w3-bar-item w3-button">Menu</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button">Testimonials</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button">Sitemap</a>
+</div>
+
+
+<div class="w3-padding w3-light-grey w3-small">
+    <span><a href="index.html">Home</a> / Contact</span>
+</div>
+
+
+    <h1>Happy Tails Contact Form</h1>
+    <form>
+  <fieldset>
+    <legend>Service Request Form</legend>
+        <label for="name">Full Name:</label><br>
+  <input type="text" id="name" name="name"><br><br>
+
+  <label for="service">Selecte which service you would like to receive updates on:</label><br>
+  <select id="service" name="service">
+    <option value="grooming">Nail cuts</option>
+    <option value="boarding">Grooming</option>
+    <option value="training">Dog wash</option>
+  </select><br><br>
+
+  <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+  <label for="newsletter">Sign up for updates.</label><br><br>
+
+  <input type="submit" value="Submit">
+</fieldset>
+</form>
+
+<form>
+
+  
+  <fieldset>
+    <legend>Personal Contact Information</legend>
+
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="555-555-5555"><br><br>
+
+    <label for="contactMethod">Preferred Contact Method:</label><br>
+    <input type="radio" id="contactEmail" name="contactMethod" value="Email">
+    <label for="contactEmail">Email</label><br>
+    <input type="radio" id="contactPhone" name="contactMethod" value="Phone">
+    <label for="contactPhone">Phone</label><br><br>
+
+    <label for="apptDate">Preferred Appointment Date:</label><br>
+    <input type="date" id="apptDate" name="apptDate"><br><br>
+
+  </fieldset>
+
+  <br>
+
+
+  <fieldset>
+        <label for="dogName">Dog’s Name:</label><br>
+    <input type="text" id="dogName" name="dogName"><br><br>
+    <legend>Dog Supplies & Services</legend>
+
+    <label for="serviceType">Select a Service:</label><br>
+    <select id="serviceType" name="serviceType">
+      <option value="grooming">Grooming</option>
+      <option value="boarding">Boarding</option>
+      <option value="training">Training</option>
+      <option value="daycare">Daycare</option>
+    </select><br><br>
+
+    <label>Additional Supplies Needed:</label><br>
+    <input type="checkbox" id="toys" name="supplies" value="Toys">
+    <label for="toys">Toys</label><br>
+    <input type="checkbox" id="food" name="supplies" value="Food">
+    <label for="food">Dog Food</label><br>
+    <input type="checkbox" id="collar" name="supplies" value="Collar">
+    <label for="collar">Collar/Leash</label><br><br>
+
+    <label for="dogColor">Choose Your Dog’s Favorite Color:</label><br>
+    <input type="color" id="dogColor" name="dogColor"><br><br>
+
+    <datalist id="breedOptions">
+      <option value="Golden Retriever">
+      <option value="Labrador">
+      <option value="German Shepherd">
+      <option value="Poodle">
+      <option value="Bulldog">
+    </datalist><br><br>
+
+
+  </fieldset>
+
+  <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

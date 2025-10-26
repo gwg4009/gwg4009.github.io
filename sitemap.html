@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Tails</title> 
+    
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="responsive.css"> 
+    
+
+<link rel="icon" type="image/png" href="Happy Tails Logo.png">
+</head>
+
+<body>
+
+
+<div class="w3-bar w3-light-grey w3-border w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="productsandservices.html" class="w3-bar-item w3-button w3-hide-small">Products and Services</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button w3-hide-small">Testimonials</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button w3-hide-small">Sitemap</a>
+
+    <a href="javascript:void(0)" 
+       class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" 
+       onclick="toggleMenu()">☰</a>
+</div>
+
+
+<div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-light-grey">
+    <a href="productsandservices.html" class="w3-bar-item w3-button">Menu</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button">Testimonials</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button">Sitemap</a>
+</div>
+
+
+<div class="w3-padding w3-light-grey w3-small">
+    <span><a href="index.html">Home</a> / Sitemap</span>
+</div>
+<title>Sitemap</title>
+<style>
+.accordion {
+  background-color: #eee;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+.panel {
+  display: none;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>Sitemap</h1>
+
+<button class="accordion">Happy Tails Pages</button>
+<div class="panel">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="productsandservices.html">Products and Services</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="sitemap.html">Sitemap</a></li>
+  </ul>
+</div>
+
+<script>
+const acc = document.querySelector(".accordion");
+acc.addEventListener("click", function() {
+  const panel = this.nextElementSibling;
+  panel.style.display = panel.style.display === "block" ? "none" : "block";
+});
+</script>
+
+</body>
+</html>

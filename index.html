@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Happy Tails</title> 
+    
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="responsive.css"> 
+    
+<link rel="icon" type="image/png" href="Happy Tails Logo.png">
+</head>
+
+<form action="index.html" method="get" target="_blank" style="position: fixed; right: 20px; top: 20px;">
+  <input type="text" name="q" placeholder="Search this site...">
+  <input type="hidden" name="sitesearch" value="index.html">
+  <button type="submit">Search</button>
+</form>
+
+<body>
+
+<div class="w3-bar w3-light-grey w3-border w3-large">
+    <a href="index.html" class="w3-bar-item w3-button">Home</a>
+    <a href="productsandservices.html" class="w3-bar-item w3-button w3-hide-small">Products and Services</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button w3-hide-small">Testimonials</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button w3-hide-small">Sitemap</a>
+
+    <a href="javascript:void(0)" 
+       class="w3-bar-item w3-button w3-right w3-hide-medium w3-hide-large" 
+       onclick="toggleMenu()">☰</a>
+</div>
+
+<div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-light-grey">
+    <a href="productsandservices.html" class="w3-bar-item w3-button">Menu</a>
+    <a href="testimonials.html" class="w3-bar-item w3-button">Testimonials</a>
+    <a href="contact.html" class="w3-bar-item w3-button">Contact</a>
+    <a href="sitemap.html" class="w3-bar-item w3-button">Sitemap</a>
+</div>
+
+
+<div class="w3-padding w3-light-grey w3-small">
+    <span><a href="index.html">Home</a> / Welcome</span>
+</div>
+
+
+<header class="w3-display-container w3-center" style="position:relative;">
+    <img src="main page image.webp" style="width:100%" alt="Main Page dog image">
+    <div class="w3-display-middle w3-padding w3-black w3-opacity-min">
+        <h1 class="w3-xxlarge w3-text-white">Welcome to Happy Tails</h1>
+        <p class="w3-large">Home of the Happy Tails</p>
+        <button class="w3-button w3-red" onclick="document.getElementById('specialsModal').style.display='block'">
+            Pet Supply Specials
+        </button>
+    </div>
+</header>
+
+
+<div class="w3-content w3-padding-32 w3-center">
+    <h2>About Us</h2>
+    <p>
+        At Happy Tails, we sell put supplies, grooming services, and pet appointments. 
+        Stop in to see what we have for your furry friend!
+    </p>
+</div>
+
+
+
+<div class="w3-row w3-padding-32 w3-center">
+    <div class="w3-third w3-padding">
+        <div class="w3-card">
+            <img src="dog collar and leash main page.webp" style="width:65%" alt="Classic Cheeseburger">
+            <div class="w3-container">
+                <h3>Pet Supplies</h3>
+                <p>Leashes, Harness, Collars and more.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-third w3-padding">
+        <div class="w3-card">
+            <img src="pet grooming home.jpg" style="width:100%" alt="Grooming">
+            <div class="w3-container">
+                <h3>Services</h3>
+                <p>We offer pet grooming services.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-third w3-padding">
+        <div class="w3-card">
+            <img src="pet appointment main.jpeg" style="width:100%" alt="Appointment">
+            <div class="w3-container">
+                <h3>Appointments</h3>
+                <p>Schedule an appointment today!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="specialsModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-red"> 
+            <span onclick="document.getElementById('specialsModal').style.display='none'" 
+                  class="w3-button w3-display-topright">&times;</span>
+            <h2>Today's Specials</h2>
+        </header>
+        <div class="w3-container">
+            <p>Adjustable Harness 45% off!</p>
+            <p>Grooming discounts on Wednesdays.</p>
+            <p>Rugid brand leashes 5% off!</p>
+        </div>
+    </div>
+</div>
+
+
+<script>
+function toggleMenu() {
+    var x = document.getElementById("mobileMenu");
+    if (x.className.indexOf("w3-show") === -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
